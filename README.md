@@ -1,23 +1,21 @@
 
-#linear search
 nlist = [2, 3, 5, 6, 7, 12, 90]
 found = False
-count = 0
-searchterm = int(input("Enter a search term"))
+search_term = int(input("Enter a search term: "))  # Changed to search_term
 positions = []
-#create a loop to search through each data
+
+# Loop to search through each data element
 for x in range(len(nlist)):
-    # check to see if the item is in the list
-    if (searchterm == nlist[x]):
+    # Check if the item is in the list
+    if search_term == nlist[x]:  # Changed to search_term
         found = True
-        count += 1
-        positions.append(x)
+        positions.append(x)  # Add the index of the found element
 
-# Outputs to see if the data element is in the list      
-if (found == True):
-    print(f"Count {count} occurrences of {searchterm} found in positions {positions}")
-
+# Output to see if the data element is in the list
+if found:
+    print(f"{search_term} found in positions: {positions}")  # Changed to search_term
 else:
-    print("not found data item")
+    print("Not found data item.")
+
     
         
